@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+/* barra navegacion horizontal */
+
+header label{
+    cursor: pointer;
+    display: none;
+}
+#btn-menu1{
+    display: none;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    background-color: rgb(231, 230, 230);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.menu ul ul{/*todos los ul que esten dentro de un ul*/
+    display: none;
+}
+.menu a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+
+.menu ul li:hover ul{/*cuando pase el mouse dentro de un li que este dentro de ul seleccion un ul que este dentro de li */
+    margin-left: 10px;
+    background-color: rgb(241, 200, 238);
+    display: block;
+    position: absolute;
+}
+
+/* ,, */
+.a1{
+    text-decoration: none;
+    color: gray;
+}
+nav  li a:hover{
+    color: rgb(226, 159, 193);
+    transition: all .3s;
+}
+
+#tituloPrincipal{
+    font-family: 'Charmonman', cursive;
+    font-size: 20px;
+    color:rgb(51, 47, 47);
+}
+#titulo{
+    font-family: 'Charmonman', cursive;
+    font-size: 60px;
+    color:rgb(250, 111, 208);
+}
+body{
+    background-color:rgb(255, 241, 241);
+    font-family: Helvetica,sans-serif;
+    font-size: 20px;
+    color: gray;
+}
+main{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 740px;/*ccc*/
+
+}
+.item{
+    background-image: url("../img/fondo.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 0 5px 0  rgba(119, 111, 115, 0.759) ;
+    transition: all 380ms;
+    padding: 20px;
+    
+}
+.div1{
+    border-radius: 59px;
+    background-color: rgb(149,11,132);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contenedor1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-gap:30px;/* separacion entre cada item*/
+
+}
+
+
+.imagen1{
+    width: 60%;
+  
+    border-radius: 100px;
+}
+
+
+#icono{
+    color:rgb(250, 111, 208);
+    font-size: 40px;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-top:1%;
+    position: relative;
+    left: 15%;
+    
+}
+input[type="checkbox"]
+{
+    margin-top: 7px;
+}
+input[type="submit"]
+{
+    margin-top: 10px;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    background: rgb(149,11,132);
+background: linear-gradient(90deg, rgba(149,11,132,0.896796218487395) 2%, rgba(232,27,235,0.8631827731092436) 61%, rgba(238,22,150,1) 100%);
+box-shadow: 0 0 9px 0  rgba(245, 12, 133, 0.5) ;/*sombrita*/
+transition: all 380ms;
+}
+
+input[type="submit"]:hover{
+    background: rgb(241, 180, 225);
+    transition: all;
+}
+input[type="email"],input[type="text"],input[type="password"]{
+    background-color: transparent;
+    border: solid 1.8px rgba(240, 64, 155, 0.781);
+    text-decoration: none;
+    padding: 11px;
+
+}
+label{
+    margin-top: 7px;
+    color:rgb(149,11,132);
+    font-size: 13px;}
+    footer {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 15px;
+        color:rgb(243, 40, 165);
+        display: flex;
+        background: rgb(252, 179, 247);
+    background: linear-gradient(0deg, rgb(245, 198, 242) 1%, rgb(248, 179, 242) 2%, rgb(216, 213, 213) 100%);
+    }
+    #footerder{
+        flex:50%;
+        display:flex;
+        justify-content: start;
+    }
+    #footerizq{
+        flex:50%;
+        display: flex;
+        justify-content: end;
+    }
+
+
+    @media screen and (max-width: 600px) 
+{
+    #contenedor1{
+        grid-template-columns: repeat(1,1fr);
+    
+    }
+    main{
+        height: max-content;
+    }
+       /* -------------menu horizontaal--------------------- */
+       header label{
+        display: block;
+        margin-top: 0%;
+    }
+    header{
+    background-color: rgb(231, 230, 230);
+
+    }
+    header i{
+        font-size: 29px;
+    }
+    label>i{
+        margin: 5px;
+    }
+    .menu {
+        position: absolute;
+        top:36px;/*corregir*/
+        left: 0;
+        width: 100%;
+        background-color: rgb(143, 220, 250);
+        transform:translateX(-100%);/*para que se vaya el menu*/
+        transition: all 0.3s;
+       
+    }
+    .menu ul{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(255, 202, 231);
+    }
+    
+    .menu a:hover{
+        background:rgba(0,0,0,0.3) ;
+    }
+
+    #btn-menu1:checked~.menu{
+        transform:translateX(0%);/*no se traslade y vuelva a su position orignial*/
+    }
+    /* otros */
+}

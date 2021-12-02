@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+   background: #faa9b4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #e0c7c9, #f5b0b9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eedadc, #f5adb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: Helvetica,sans-serif;
+    font-size: 20px;
+    color: gray;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding-top: 120px;
+}
+input[type="submit"],.boton
+{
+    margin-top: 20px;
+    border: none;
+    padding: 15px;
+    background: rgb(149,11,132);
+background: linear-gradient(90deg, rgba(149,11,132,0.896796218487395) 2%, rgba(232,27,235,0.8631827731092436) 61%, rgba(238,22,150,1) 100%);
+box-shadow: 0 0 9px 0  rgba(245, 12, 133, 0.5) ;/*sombrita*/
+transition: all 380ms;
+}
+
+
+input[type="submit"]:hover,.boton:hover{
+    background: rgb(248, 233, 244);
+    transition: all;
+}
+input[type="email"],input[type="password"]{
+    background-color: transparent;
+    border: solid 1px white;
+    text-decoration: none;
+    padding: 15px;
+
+}
+.a2{
+    text-decoration: none;
+}
+label{
+    margin-top: 5px;
+    color:rgb(252, 237, 237);
+}
+#Contenedor1{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+#div2{
+    display: grid;
+     width: 50vw;
+     background-color:blue;
+     left: 30%;
+}
+#div1{
+    background-color: red;
+
+}
